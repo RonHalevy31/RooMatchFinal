@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RooMatch - Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo2.png" alt="RooMatch logo" class="logo-img">
+            <span>RooMatch</span>
+        </div>
+
+        <nav></nav>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <h1>Create Account</h1>
+            <div id="signupMessage" style="display:none; background:#ffe5e5; color:#8b0000; padding:12px; border-radius:8px; margin-bottom:15px; text-align:center; font-weight:600;"></div>
+
+            <form id="signupForm" autocomplete="off">
+
+                <!-- Login details -->
+                <fieldset>
+                    <legend>Login Credentials</legend>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="example@email.com"
+                        >
+
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        >
+
+                        <span class="error-msg" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            required
+                        >
+
+                        <span class="error-msg" id="confirmPasswordError"></span>
+                    </div>
+                </fieldset>
+
+                <!-- Personal information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            required
+                        >
+
+                        <span class="error-msg" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Date of Birth:</label>
+
+                        <input
+                            type="date"
+                            id="birthdate"
+                            name="birthdate"
+                            required
+                        >
+
+                        <span class="error-msg" id="birthdateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            placeholder="05XXXXXXXX"
+                        >
+
+                        <span class="error-msg" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Choose gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <span class="error-msg" id="genderError"></span>
+                    </div>
+                </fieldset>
+
+                <!-- Lifestyle preferences -->
+                <fieldset>
+                    <legend>Preferences & Lifestyle</legend>
+
+                    <div class="form-group">
+                        <label for="location">Preferred Location:</label>
+
+                        <select id="location" name="location" required>
+                            <option value=""  disabled selected>Select location</option>
+                            <option>Tel Aviv</option>
+                            <option>Jerusalem</option>
+                            <option>Haifa</option>
+                            <option>Beer Sheva</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Monthly Budget (₪):</label>
+
+                        <input
+                            type="number"
+                            id="budget"
+                            name="budget"
+                            required
+                        >
+
+                        <span class="error-msg" id="budgetError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cleanliness">Cleanliness Level (1-5):</label>
+
+                        <select id="cleanliness" name="cleanliness" required>
+                            <option value="" disabled selected>Choose level</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smoking">Smoking Preference:</label>
+
+                        <select id="smoking" name="smoking" required>
+                            <option value="" disabled selected>Select prefrencer</option>
+                            <option value="non-smoker">Non-Smoker</option>
+                            <option value="smoker">Smoker</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pets">Pets:</label>
+
+                        <select id="pets" name="pets" required>
+                            <option value="" disabled selected>Select prefrencer</option>
+                            <option value="has_pets">I have pets</option>
+                            <option value="no_pets_but_ok">No pets, but ok with pets</option>
+                            <option value="no_pets_not_ok">No pets, not ok with pets</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button
+                        type="button"
+                        class="btn-secondary"
+                        onclick="window.location.href='login.html'"
+                    >
+                        Back to Login
+                    </button>
+
+                    <button type="submit" class="btn-primary">
+                        Create Account
+                    </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 RooMatch. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

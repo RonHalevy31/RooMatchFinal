@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RooMatch - Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo2.png" alt="RooMatch logo" class="logo-img">
+            <span>RooMatch</span>
+        </div>
+
+        <nav>
+            <a href="profile.html">Profile</a>
+            <a href="search.html">Search</a>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <h1>My Profile</h1>
+
+            <form id="profileForm">
+
+                <!-- Personal details -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            readonly
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="fullNameError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            readonly
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="dobError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+
+                        <select id="gender" name="gender" disabled required>
+                            <option value="">Select Gender</option>
+                            <option value="male" >Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <span
+                            class="error-msg"
+                            id="genderError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation:</label>
+
+                        <input
+                            type="text"
+                            id="occupation"
+                            name="occupation"
+                            disabled
+                            required
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="occupationError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Short Personal Description:</label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="4"
+                            disabled
+                            required
+                    ></textarea>
+
+                        <span
+                            class="error-msg"
+                            id="descriptionError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            disabled
+                            required
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="phoneError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profilePic">Profile Picture (Optional):</label>
+
+                        <input
+                            type="file"
+                            id="profilePic"
+                            name="profilePic"
+                            accept="image/*"
+                            disabled
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="profilePicError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+                </fieldset>
+
+                <!-- Housing preferences -->
+                <fieldset>
+                    <legend>Housing Preferences</legend>
+
+                    <div class="form-group">
+                        <label for="location">Preferred Location:</label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            disabled
+                            required
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="locationError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Monthly Budget (₪):</label>
+
+                        <input
+                            type="number"
+                            id="budget"
+                            name="budget"
+                            min="0"
+                            disabled
+                            required
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="budgetError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+                </fieldset>
+
+                <!-- Lifestyle -->
+                <fieldset>
+                    <legend>Lifestyle</legend>
+
+                    <div class="form-group">
+                        <label for="cleanliness">Cleanliness Level (1-5):</label>
+
+                        <input
+                            type="number"
+                            id="cleanliness"
+                            name="cleanliness"
+                            min="1"
+                            max="5"
+                            disabled
+                            required
+                        >
+
+                        <span
+                            class="error-msg"
+                            id="cleanlinessError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smoking">Smoking Preference:</label>
+
+                        <select id="smoking" name="smoking" disabled required>
+                            <option value="">Select...</option>
+                            <option value="smoker">Smoker</option>
+                            <option value="occasional">Occasionally Smokes</option>
+                            <option value="non-smoker" >Non-Smoker</option>
+                        </select>
+
+                        <span
+                            class="error-msg"
+                            id="smokingError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pets">Pets:</label>
+
+                    <select id="pets" name="pets" disabled required>
+                        <option value="">Select...</option>
+                        <option value="has_pets">Have pets</option>
+                        <option value="no_pets_not_ok">No pets</option>
+                        <option value="no_pets_but_ok">No pets, but ok with pets</option>
+                    </select>
+
+                        <span
+                            class="error-msg"
+                            id="petsError"
+                            style="color: red; display: none;"
+                        ></span>
+                    </div>
+                </fieldset>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button
+                        type="button"
+                        id="editBtn"
+                        class="btn-secondary"
+                    >
+                        Edit Profile
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="saveBtn"
+                        class="btn-primary"
+                        disabled
+                    >
+                        Save
+                    </button>
+                    
+                    <button
+                    type="button"
+                    id="deleteBtn"
+                    class="btn-secondary"
+                >
+                    Delete Account
+                </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 RooMatch. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
